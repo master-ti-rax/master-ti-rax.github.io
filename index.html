@@ -129,6 +129,18 @@
       align-items: center;
     }
 
+    .hero-wrapper {
+      width: 100%;
+      min-height: calc(100vh - 72px);
+      margin: 0;
+      display: flex;
+      align-items: center;
+      background: linear-gradient( 90deg, rgba(0, 20, 45, 0.86) 0%, rgba(0, 20, 45, 0.68) 48%, rgba(0, 20, 45, 0.35) 100% ), url("https://github.com/master-ti-rax/master-ti-rax.github.io/blob/main/hero-image.png?raw=true");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
     .eyebrow,
     .section-kicker {
       display: inline-block;
@@ -477,38 +489,23 @@
   </header>
 
   <main id="top">
-    <section class="hero container">
-      <div class="hero-copy">
-        <div class="eyebrow">MASTER Open Call #2 · Horizon Europe</div>
-        <h1>Immersive AI for industrial robotics training.</h1>
-        <p>
-          TI-RAX leverages multi-agent, generative artificial intelligence to develop extended-reality training environments where learners can practise industrial robotics in safe, realistic, and repeatable simulations.
-        </p>
-        <div class="hero-actions">
-          <a class="button primary" href="https://github.com/master-ti-rax/educational-scenes/raw/main/manuals/learner-manual.pdf" download="TI-RAX-Learner-Manual.pdf">Try example scenarios into the VIROO Player</a>
-          <a class="button secondary" href="https://github.com/master-ti-rax/educational-scenes/raw/main/videos/walkthroughs/001_sorting_wasted_automotive_batteries.mp4" target="_blank" rel="noreferrer">Watch an example immersive training demo</a>
+    
+    <div class="hero-wrapper">
+      <section class="hero container">
+        <div class="hero-copy">
+          <div class="eyebrow">MASTER Open Call #2 · Horizon Europe</div>
+          <h1>Immersive AI for industrial robotics training.</h1>
+          <p>
+            TI-RAX leverages multi-agent, generative artificial intelligence to develop extended-reality training environments where learners can practise industrial robotics in safe, realistic, and repeatable simulations.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="https://github.com/master-ti-rax/educational-scenes/raw/main/manuals/learner-manual.pdf" download="TI-RAX-Learner-Manual.pdf">Try example scenarios into the VIROO Player</a>
+            <a class="button secondary" href="https://github.com/master-ti-rax/educational-scenes/raw/main/videos/walkthroughs/001_sorting_wasted_automotive_batteries.mp4" target="_blank" rel="noreferrer">Watch an example immersive training demo</a>
+          </div>
         </div>
-      </div>
-      <div class="research-card" aria-label="TI-RAX research summary">
-        <div class="metric">
-          <span>Focus</span>
-          <strong>XR training</strong>
-        </div>
-        <div class="metric">
-          <span>Method</span>
-          <strong>AI-assisted scene generation</strong>
-        </div>
-        <div class="metric">
-          <span>Domain</span>
-          <strong>Industrial robotics education</strong>
-        </div>
-        <div class="metric">
-          <span>Deployment</span>
-          <strong>VIROO platform</strong>
-        </div>
-      </div>
-    </section>
-
+      </section>
+    </div>
+    
     <section id="mission" class="section-line">
       <div class="container narrow">
         <p class="lead">
