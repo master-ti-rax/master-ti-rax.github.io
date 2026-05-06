@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="TI-RAX creates immersive extended-reality training experiences for industrial robotics education, powered by AI and deployed through the VIROO platform." />
   <title>TI-RAX | Immersive Robotics Training</title>
+
   <style>
     :root {
       --bg: #ffffff;
@@ -28,7 +29,7 @@
 
     body {
       margin: 0;
-      font-family: Inter, Roboto, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: Inter, Roboto, ui-sans-serif, system-ui, sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.58;
@@ -36,20 +37,25 @@
       text-rendering: optimizeLegibility;
     }
 
-    a { color: inherit; text-decoration: none; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
     .container {
       width: min(100% - 40px, var(--max));
       margin: 0 auto;
     }
 
-    .narrow { max-width: 920px; }
+    .narrow {
+      max-width: 920px;
+    }
 
     header {
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(255, 255, 255, 0.94);
+      background: rgba(255,255,255,0.94);
       backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border);
     }
@@ -76,7 +82,6 @@
       height: 42px;
       border-radius: 12px;
       object-fit: cover;
-      background: #ffffff;
     }
 
     nav {
@@ -88,7 +93,9 @@
       font-weight: 500;
     }
 
-    nav a:hover { color: var(--text); }
+    nav a:hover {
+      color: var(--text);
+    }
 
     .button {
       display: inline-flex;
@@ -100,31 +107,33 @@
       font-size: 0.95rem;
       font-weight: 650;
       border: 1px solid transparent;
-      transition: background .18s ease, border-color .18s ease, transform .18s ease;
+      transition: .18s ease;
       white-space: nowrap;
     }
 
-    .button:hover { transform: translateY(-1px); }
+    .button:hover {
+      transform: translateY(-1px);
+    }
 
     .button.primary {
       background: var(--primary);
-      color: #ffffff;
+      color: white;
     }
 
-    .button.primary:hover { background: var(--primary-dark); }
+    .button.primary:hover {
+      background: var(--primary-dark);
+    }
 
     .button.secondary {
-      background: #ffffff;
+      background: white;
       border-color: var(--border-strong);
       color: var(--text);
     }
 
-    .button.secondary:hover { border-color: #9ca3af; }
-
     .hero {
       padding: 108px 0 86px;
       display: grid;
-      grid-template-columns: minmax(0, 1.5fr) minmax(320px, 0.8fr);
+      grid-template-columns: minmax(0, 1.5fr) minmax(320px, 0.9fr);
       gap: 64px;
       align-items: center;
     }
@@ -133,7 +142,6 @@
     .section-kicker {
       display: inline-block;
       margin-bottom: 18px;
-      margin-left: 7px;
       color: var(--primary);
       font-size: 0.82rem;
       font-weight: 750;
@@ -141,12 +149,14 @@
       text-transform: uppercase;
     }
 
-    h1, h2, h3, p { margin-top: 0; }
+    h1, h2, h3, p {
+      margin-top: 0;
+    }
 
     h1 {
       max-width: 860px;
       margin-bottom: 24px;
-      font-size: clamp(3.2rem, 7.4vw, 6.9rem);
+      font-size: clamp(3.2rem, 7vw, 6.8rem);
       line-height: 0.92;
       letter-spacing: -0.085em;
       font-weight: 760;
@@ -167,44 +177,33 @@
       margin-top: 34px;
     }
 
-    .research-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
+    .hero-video-card {
+      background: white;
       border-radius: 28px;
-      padding: 10px;
+      overflow: hidden;
       box-shadow: var(--shadow);
     }
 
-    .metric {
-      padding: 24px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .metric:last-child { border-bottom: 0; }
-
-    .metric span {
+    .hero-video-card video {
       display: block;
-      margin-bottom: 6px;
-      color: var(--subtle);
-      font-size: 0.82rem;
-      font-weight: 650;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
+      width: 100%;
+      height: auto;
+      background: black;
     }
 
-    .metric strong {
-      display: block;
-      color: var(--text);
-      font-size: 1.22rem;
-      line-height: 1.25;
-      letter-spacing: -0.035em;
+    .video-caption {
+      padding: 18px 22px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.5;
+      background: white;
     }
 
-    section { padding: 82px 0; }
+    section {
+      padding: 82px 0;
+    }
 
     .section-line {
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
       background: var(--surface-soft);
     }
 
@@ -241,17 +240,14 @@
       gap: 20px;
     }
 
-    .cards.three { grid-template-columns: repeat(3, 1fr); }
-
-    .card {
-      background: var(--surface);
-      border-radius: var(--radius);
-      padding: 30px;
+    .cards.three {
+      grid-template-columns: repeat(3, 1fr);
     }
 
-    .card.minimal {
-      box-shadow: none;
-      min-height: 260px;
+    .card {
+      background: white;
+      border-radius: var(--radius);
+      padding: 30px;
     }
 
     .card h3,
@@ -295,6 +291,7 @@
       gap: 22px;
       padding: 28px;
       border-radius: 22px;
+      background: white;
     }
 
     .case-item > span {
@@ -312,7 +309,7 @@
     .process-step {
       min-height: 250px;
       padding: 28px;
-      background: #ffffff;
+      background: white;
     }
 
     .process-step > span {
@@ -338,12 +335,12 @@
       min-height: 190px;
       padding: 26px;
       border-radius: 22px;
-      transition: transform .18s ease, border-color .18s ease;
+      background: white;
+      transition: transform .18s ease;
     }
 
     .resource:hover {
       transform: translateY(-2px);
-      border-color: #bfdbfe;
     }
 
     .resource strong {
@@ -359,8 +356,6 @@
       font-size: 0.98rem;
     }
 
-    .partners-section { align-items: center; }
-
     .partners {
       display: grid;
       gap: 16px;
@@ -368,7 +363,7 @@
 
     .partner {
       padding: 26px;
-      background: #ffffff;
+      background: white;
       border-radius: 22px;
     }
 
@@ -383,14 +378,8 @@
     .cta {
       text-align: center;
       padding: 72px 32px;
-      background: #ffffff;
+      background: white;
       border-radius: 32px;
-    }
-
-    .cta h2 {
-      max-width: 860px;
-      margin-left: auto;
-      margin-right: auto;
     }
 
     .cta p {
@@ -415,11 +404,18 @@
       gap: 56px;
     }
 
-    footer strong { color: #ffffff; }
-    footer a { color: #93c5fd; }
+    footer strong {
+      color: white;
+    }
+
+    footer a {
+      color: #93c5fd;
+    }
 
     @media (max-width: 980px) {
-      nav { display: none; }
+      nav {
+        display: none;
+      }
 
       .hero,
       .split,
@@ -435,264 +431,118 @@
     }
 
     @media (max-width: 680px) {
-      .container { width: min(100% - 28px, var(--max)); }
+      .container {
+        width: min(100% - 28px, var(--max));
+      }
 
-      .hero { padding: 72px 0 56px; }
+      .hero {
+        padding: 72px 0 56px;
+      }
 
-      h1 { font-size: clamp(3rem, 16vw, 4.8rem); }
+      h1 {
+        font-size: clamp(3rem, 16vw, 4.8rem);
+      }
 
-      section { padding: 62px 0; }
+      section {
+        padding: 62px 0;
+      }
 
       .cards.three,
       .resource-grid,
       .process {
         grid-template-columns: 1fr;
       }
-
-      .case-item {
-        grid-template-columns: 1fr;
-        gap: 10px;
-      }
-
-      .cta { padding: 54px 22px; }
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <div class="container nav">
-      <a class="brand" href="#top" aria-label="TI-RAX home">
-        <img src="https://avatars.githubusercontent.com/u/236386494?s=200&v=4" alt="TI-RAX logo" class="main-logo" />
-        <span>TI-RAX</span>
-      </a>
-      <nav aria-label="Main navigation">
-        <a href="#mission">Mission</a>
-        <a href="#research">Research</a>
-        <a href="#platform">Platform</a>
-        <a href="#resources">Resources</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <a class="button secondary" href="https://github.com/master-ti-rax" target="_blank" rel="noreferrer">GitHub</a>
-    </div>
-  </header>
 
-  <main id="top">
-    <section class="hero container">
-      <div class="hero-copy">
-        <div class="eyebrow">MASTER Open Call #2 · Horizon Europe</div>
-        <h1>Immersive AI for industrial robotics training.</h1>
-        <p>
-          TI-RAX leverages multi-agent, generative artificial intelligence to develop extended-reality training environments where learners can practise industrial robotics in safe, realistic, and repeatable simulations.
-        </p>
-        <div class="hero-actions">
-          <a class="button primary" href="https://github.com/master-ti-rax/educational-scenes/blob/main/manuals/learner-manual.pdf" target="_blank" rel="noreferrer">Try example scenarios into the VIROO Player</a>
-          <a class="button secondary" href="https://github.com/master-ti-rax/educational-scenes/blob/main/videos/walkthroughs/001_sorting_wasted_automotive_batteries.mp4" target="_blank" rel="noreferrer">View video demonstrations</a>
-        </div>
-      </div>
-      <div class="research-card" aria-label="TI-RAX research summary">
-        <div class="metric">
-          <span>Focus</span>
-          <strong>XR training</strong>
-        </div>
-        <div class="metric">
-          <span>Method</span>
-          <strong>AI-assisted scene generation</strong>
-        </div>
-        <div class="metric">
-          <span>Domain</span>
-          <strong>Industrial robotics education</strong>
-        </div>
-        <div class="metric">
-          <span>Deployment</span>
-          <strong>VIROO platform</strong>
-        </div>
-      </div>
-    </section>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#top">
+      <img src="https://avatars.githubusercontent.com/u/236386494?s=200&v=4"
+           alt="TI-RAX logo"
+           class="main-logo" />
+      <span>TI-RAX</span>
+    </a>
 
-    <section id="mission" class="section-line">
-      <div class="container narrow">
-        <p class="lead">
-          Industrial training requires more than observation. Learners need to act, decide, fail safely, and repeat. TI-RAX transforms pedagogical designs into immersive simulations, closing the gap between instructional planning and deployable training.
-        </p>
-      </div>
-    </section>
+    <nav>
+      <a href="#mission">Mission</a>
+      <a href="#research">Research</a>
+      <a href="#platform">Platform</a>
+      <a href="#resources">Resources</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-    <section id="research">
-      <div class="container">
-        <div class="section-title">
-          <span class="section-kicker">Research objectives</span>
-          <h2>From educational design to simulation.</h2>
-          <p>TI-RAX addresses core barriers in the creation and adoption of extended-reality training for industrial contexts.</p>
-        </div>
-        <div class="cards three">
-          <article class="card minimal">
-            <h3>Operationalizing learning designs</h3>
-            <p>Structured worksheets are converted into deployable applications, preserving learning objectives, tasks, and scene requirements.</p>
-          </article>
-          <article class="card minimal">
-            <h3>Simulating hazardous procedures</h3>
-            <p>High-risk industrial situations are reproduced in controlled virtual environments, enabling safety training without physical exposure.</p>
-          </article>
-          <article class="card minimal">
-            <h3>Scaling immersive content creation</h3>
-            <p>A multi-agent generation pipeline supports the design, production, and integration of XR scenes for the VIROO platform.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+    <a class="button secondary"
+       href="https://github.com/master-ti-rax"
+       target="_blank">
+      GitHub
+    </a>
+  </div>
+</header>
 
-    <section id="platform" class="soft-section">
-      <div class="container split research-split">
-        <div>
-          <span class="section-kicker">Initial use cases</span>
-          <h2>Concrete industrial scenarios. Scientific training design.</h2>
-          <p class="section-text">
-            The first TI-RAX simulations focus on industrial procedures where immersive practice can improve operational safety and readiness.
-          </p>
-        </div>
-        <div class="case-list">
-          <article class="case-item">
-            <span>01</span>
-            <div>
-              <h3>Automotive battery sorting</h3>
-              <p>Decision-making and procedural training in a robotics-enabled industrial workflow.</p>
-            </div>
-          </article>
-          <article class="case-item">
-            <span>02</span>
-            <div>
-              <h3>End-of-life refrigerator dismantling</h3>
-              <p>Safe exploration of task sequencing, risk points, and process execution in a simulated environment.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+<main id="top">
 
-    <section>
-      <div class="container">
-        <div class="section-title">
-          <span class="section-kicker">Workflow</span>
-          <h2>A reproducible path to immersive training.</h2>
-        </div>
-        <div class="process">
-          <div class="process-step">
-            <span>1</span>
-            <h3>Specify</h3>
-            <p>Define educational objectives, learner actions, safety conditions, and scene elements.</p>
-          </div>
-          <div class="process-step">
-            <span>2</span>
-            <h3>Generate</h3>
-            <p>Use teams of generative-based agents to assist scene design and implementation.</p>
-          </div>
-          <div class="process-step">
-            <span>3</span>
-            <h3>Integrate</h3>
-            <p>Deploy the generated scene within the VIROO application ecosystem across systems.</p>
-          </div>
-          <div class="process-step">
-            <span>4</span>
-            <h3>Train</h3>
-            <p>Enable learners to practise procedures through repeatable virtual experiences.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+  <section class="hero container">
 
-    <section id="resources" class="soft-section">
-      <div class="container">
-        <div class="section-title">
-          <span class="section-kicker">Open resources</span>
-          <h2>Project assets and technical material.</h2>
-          <p>Resources are openly available for inspection, reuse, contribution, and evaluation.</p>
-        </div>
-        <div class="resource-grid">
-          <a class="resource" href="https://github.com/master-ti-rax/educational-scenes/tree/main/sheets" target="_blank" rel="noreferrer">
-            <strong>Educational worksheets</strong>
-            <span>Structured educational designs defining objectives, tasks, interactions, and simulation requirements.</span>
-          </a>
-          <a class="resource" href="https://github.com/master-ti-rax/xage" target="_blank" rel="noreferrer">
-            <strong>Multi-agent pipeline</strong>
-            <span>Multi-agent generation framework supporting scalable creation of immersive VIROO experiences.</span>
-          </a>
-          <a class="resource" href="https://github.com/master-ti-rax/educational-scenes/tree/main/apps" target="_blank" rel="noreferrer">
-            <strong>Scene source files</strong>
-            <span>Source code, Unity assets, and deployable immersive training application projects.</span>
-          </a>
-          <a class="resource" href="https://github.com/master-ti-rax/educational-scenes/tree/main/manuals" target="_blank" rel="noreferrer">
-            <strong>User manuals</strong>
-            <span>Technical and operational documentation for deployment, configuration, and learner access..</span>
-          </a>
-          <a class="resource" href="https://viroo.virtualwareco.com/resources/players/" target="_blank" rel="noreferrer">
-            <strong>End-user applications</strong>
-            <span>Interactive industrial training simulations accessible directly through the VIROO platform.</span>
-          </a>
-          <a class="resource" href="https://github.com/master-ti-rax/educational-scenes/blob/main/videos/walkthroughs/001_sorting_wasted_automotive_batteries.mp4" target="_blank" rel="noreferrer">
-            <strong>Walkthrough videos</strong>
-            <span>Recorded demonstrations showcasing immersive learner interactions across industrial training scenarios.</span>
-          </a>
-        </div>
+    <div class="hero-copy">
+      <div class="eyebrow">
+        MASTER Open Call #2 · Horizon Europe
       </div>
-    </section>
 
-    <section>
-      <div class="container split partners-section">
-        <div>
-          <span class="section-kicker">Consortium</span>
-          <h2>Scientific and industrial expertise.</h2>
-          <p class="section-text">
-            TI-RAX brings academic expertise in artificial intelligence and education with industry experience in digital transformation.
-          </p>
-        </div>
-        <div class="partners">
-          <article class="partner">
-            <img class="partner-logo-image" src="https://camo.githubusercontent.com/7a6d2de1931e7140bb79ece94e1b5b6bd0bbcfdd71c6d7b7b5497c209b3df220/68747470733a2f2f7777772e756e6963612e69742f73697465732f64656661756c742f66696c65732f7374796c65732f776964652f7075626c69632f323032332d30362f4c6f676f5f6c756e676f5f5247425f64302e706e673f69746f6b3d625f71486b37646f" alt="University of Cagliari logo" />
-            <h3>University of Cagliari</h3>
-            <p>Scientific partner in generative AI, AI in education, and deep learning technologies.</p>
-          </article>
-          <article class="partner">
-            <img class="partner-logo-image" src="https://camo.githubusercontent.com/8e27237de0bafbcf3f7e60467d79b349975757291925171fc57baaacfd70dc00/68747470733a2f2f6c69666570726f6a656374732e72326d736f6c7574696f6e2e636f6d2f77702d636f6e74656e742f75706c6f6164732f323032342f30332f4c6f676f2d52324d2d536f6c7574696f6e2d5245442d535247422d322e706e67" alt="R2M Solution logo" />
-            <h3>R2M Solution</h3>
-            <p>Business development partner with industry experience in information and communication technologies.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+      <h1>
+        Immersive AI for industrial robotics training.
+      </h1>
 
-    <section class="container">
-      <div class="cta research-cta">
-        <span class="section-kicker">Get involved</span>
-        <h2>Contribute to safer, more accessible industrial training.</h2>
-        <p>
-          We welcome code contributions, technical feedback, user experience insights, and participation in evaluation activities.
-        </p>
-        <div class="hero-actions" style="justify-content:center;margin-top:0;">
-          <a class="button primary" href="https://github.com/master-ti-rax" target="_blank" rel="noreferrer">Explore the repositories</a>
-          <a class="button secondary" href="mailto:mirko.marras@unica.it">Contact the team</a>
-        </div>
-      </div>
-    </section>
-  </main>
+      <p>
+        TI-RAX leverages multi-agent generative artificial intelligence
+        to develop extended-reality training environments where learners
+        can practise industrial robotics in safe, realistic, and repeatable simulations.
+      </p>
 
-  <footer id="contact">
-    <div class="container footer-grid">
-      <div>
-        <strong>TI-RAX</strong><br />
-        Version 0.1 · Stable · GNU GPLv3<br /><br />
-        TI-RAX has received funding from the European Union’s Horizon Europe research and innovation action programme via Open Call #2 – MASTER, issued and executed under project MASTER, grant agreement Nr. 101093079. The views expressed are those of the author(s) only and do not necessarily reflect the views of the European Union.
-      </div>
-      <div>
-        <strong>Contact</strong><br />
-        University of Cagliari:<br />
-        <a href="mailto:mirko.marras@unica.it">mirko.marras@unica.it</a><br />
-        <a href="mailto:andreag.martis@unica.it">andreag.martis@unica.it</a><br />
-        <a href="mailto:diego.reforgiato@unica.it">diego.reforgiato@unica.it</a><br />
-        <a href="mailto:daniele.riboni@unica.it">daniele.riboni@unica.it</a><br /><br />
-        R2M Solution:<br />
-        <a href="mailto:giuseppe.scarpi@r2msolution.com">giuseppe.scarpi@r2msolution.com</a>
+      <div class="hero-actions">
+        <a class="button primary"
+           href="https://github.com/master-ti-rax/educational-scenes/blob/main/manuals/learner-manual.pdf"
+           target="_blank">
+          Try example scenarios
+        </a>
+
+        <a class="button secondary"
+           href="https://github.com/master-ti-rax/educational-scenes/blob/main/videos/walkthroughs/001_sorting_wasted_automotive_batteries.mp4"
+           target="_blank">
+          View demonstrations
+        </a>
       </div>
     </div>
-  </footer>
+
+    <div class="hero-video-card">
+
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        controls
+        poster="https://avatars.githubusercontent.com/u/236386494?s=200&v=4">
+
+        <source
+          src="https://github.com/master-ti-rax/educational-scenes/raw/main/videos/walkthroughs/001_sorting_wasted_automotive_batteries.mp4"
+          type="video/mp4">
+
+      </video>
+
+      <div class="video-caption">
+        Automotive batteries sorting scenario executed within
+        the VIROO immersive training environment.
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
 </body>
 </html>
