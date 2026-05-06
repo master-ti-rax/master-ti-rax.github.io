@@ -71,17 +71,13 @@
       letter-spacing: -0.025em;
     }
 
-    .brand-mark {
-      width: 38px;
-      height: 38px;
-      display: grid;
-      place-items: center;
-      border-radius: 10px;
-      background: #111827;
-      color: #ffffff;
-      font-size: 0.85rem;
-      font-weight: 800;
-      letter-spacing: -0.03em;
+    .main-logo {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      object-fit: cover;
+      border: 1px solid var(--border);
+      background: #ffffff;
     }
 
     nav {
@@ -393,20 +389,12 @@
       box-shadow: var(--shadow);
     }
 
-    .partner-logo {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 72px;
-      height: 38px;
-      padding: 0 12px;
+    .partner-logo-image {
+      height: 52px;
+      width: auto;
+      object-fit: contain;
       margin-bottom: 20px;
-      border: 1px solid var(--border-strong);
-      border-radius: 999px;
-      color: var(--subtle);
-      font-size: 0.82rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
+      display: block;
     }
 
     .cta {
@@ -493,7 +481,7 @@
   <header>
     <div class="container nav">
       <a class="brand" href="#top" aria-label="TI-RAX home">
-        <span class="brand-mark">TI</span>
+        <img src="https://avatars.githubusercontent.com/u/236386494?s=200&v=4" alt="TI-RAX logo" class="main-logo" />
         <span>TI-RAX</span>
       </a>
       <nav aria-label="Main navigation">
@@ -517,7 +505,7 @@
         </p>
         <div class="hero-actions">
           <a class="button primary" href="https://viroo.virtualwareco.com/resources/players/" target="_blank" rel="noreferrer">Access the VIROO Player</a>
-          <a class="button secondary" href="https://github.com/master-ti-rax/educational-scenes/tree/main/videos" target="_blank" rel="noreferrer">View demonstrations</a>
+          <a class="button secondary" href="https://github.com/master-ti-rax/educational-scenes/blob/main/videos/walkthroughs/001_sorting_wasted_automotive_batteries.mp4" target="_blank" rel="noreferrer">View demonstrations</a>
         </div>
       </div>
       <div class="research-card" aria-label="TI-RAX research summary">
@@ -659,7 +647,7 @@
             <strong>End-user applications</strong>
             <span>Executable scenarios through the VIROO Player.</span>
           </a>
-          <a class="resource" href="https://github.com/master-ti-rax/educational-scenes/tree/main/videos" target="_blank" rel="noreferrer">
+          <a class="resource" href="https://github.com/master-ti-rax/educational-scenes/blob/main/videos/walkthroughs/001_sorting_wasted_automotive_batteries.mp4" target="_blank" rel="noreferrer">
             <strong>Walkthrough videos</strong>
             <span>Demonstrations of learner interaction workflows.</span>
           </a>
@@ -678,12 +666,12 @@
         </div>
         <div class="partners">
           <article class="partner">
-            <div class="partner-logo">UNICA</div>
+            <img class="partner-logo-image" src="https://camo.githubusercontent.com/7a6d2de1931e7140bb79ece94e1b5b6bd0bbcfdd71c6d7b7b5497c209b3df220/68747470733a2f2f7777772e756e6963612e69742f73697465732f64656661756c742f66696c65732f7374796c65732f776964652f7075626c69632f323032332d30362f4c6f676f5f6c756e676f5f5247425f64302e706e673f69746f6b3d625f71486b37646f" alt="University of Cagliari logo" />
             <h3>University of Cagliari</h3>
             <p>Scientific partner in generative AI, AI in education, and deep learning technologies.</p>
           </article>
           <article class="partner">
-            <div class="partner-logo">R2M</div>
+            <img class="partner-logo-image" src="https://camo.githubusercontent.com/8e27237de0bafbcf3f7e60467d79b349975757291925171fc57baaacfd70dc00/68747470733a2f2f6c69666570726f6a656374732e72326d736f6c7574696f6e2e636f6d2f77702d636f6e74656e742f75706c6f6164732f323032342f30332f4c6f676f2d52324d2d536f6c7574696f6e2d5245442d535247422d322e706e67" alt="R2M Solution logo" />
             <h3>R2M Solution</h3>
             <p>Business development partner with industry experience in information and communication technologies.</p>
           </article>
