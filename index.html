@@ -220,7 +220,6 @@
 
     .section-line {
       border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
       background: var(--surface-soft);
     }
 
@@ -441,7 +440,7 @@
     }
     
     .footer-eu-logos {
-      display: flex;
+      display: contents;
       align-items: center;
       gap: 14px;
       flex-wrap: wrap;
@@ -460,16 +459,23 @@
       gap: 34px;
     }
     
-    .network-partner-footer p {
-      margin: 0 0 14px;
+    .network-partner-inline {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    
+    .network-partner-inline p {
+      margin: 0;
+      white-space: nowrap;
       color: #d1d5db;
       font-size: 0.95rem;
     }
     
-    .network-partner-footer img {
-      width: 100%;
-      max-width: 360px;
-      height: auto;
+    .network-partner-inline img {
+      height: 54px;
+      width: auto;
       object-fit: contain;
       display: block;
     }
@@ -765,9 +771,9 @@
   
       <div class="footer-left">
   
-        <div class="network-partner-footer">
+        <div class="network-partner-inline">
           <p>The project is partner of the AI4Manufacturing network</p>
-  
+        
           <a href="https://ai4manufacturing.net/" target="_blank" rel="noreferrer">
             <img
               src="https://ai4manufacturing.net/wp-content/uploads/2024/10/ai4manu-alt-color.png"
