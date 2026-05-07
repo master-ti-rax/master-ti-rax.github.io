@@ -455,30 +455,51 @@
       display: block;
     }
 
-    .network-partner {
-      margin-top: 42px;
-      text-align: center;
+    .footer-left {
+      display: flex;
+      flex-direction: column;
+      gap: 34px;
     }
     
-    .network-partner p {
-      margin-top: 10px;
-      margin-bottom: 18px;
-      color: var(--muted);
-      font-size: 1rem;
+    .network-partner-footer p {
+      margin: 0 0 14px;
+      color: #d1d5db;
+      font-size: 0.95rem;
     }
     
-    .network-partner img {
-      height: auto;
+    .network-partner-footer img {
       width: 100%;
-      max-width: 500px;
+      max-width: 360px;
+      height: auto;
       object-fit: contain;
-      transition: transform .18s ease;
+      display: block;
     }
     
-    .network-partner a:hover img {
-      transform: translateY(-2px);
+    .footer-acknowledgement {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
     }
-
+    
+    .footer-logos {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+    
+    .footer-logos img {
+      width: 120px;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+    
+    .footer-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
     @media (max-width: 980px) {
       nav { display: none; }
 
@@ -753,26 +774,57 @@
 
   <footer id="contact">
     <div class="container footer-grid">
-      <div class="footer-acknowledgement">
-        <div class="footer-logos">
-          <img src="https://www.master-xr.eu/wp-content/uploads/2023/04/logo_white.png" alt="MASTER project logo" />
-          <img src="https://www.master-xr.eu/wp-content/uploads/2023/04/european-flag-2.png" alt="European Union logo" />
+  
+      <div class="footer-left">
+  
+        <div class="network-partner-footer">
+          <p>The project is partner of the AI4Manufacturing Network</p>
+  
+          <a href="https://ai4manufacturing.net/" target="_blank" rel="noreferrer">
+            <img
+              src="https://ai4manufacturing.net/wp-content/uploads/2024/10/ai4manu-alt-color.png"
+              alt="AI4Manufacturing Network logo"
+            />
+          </a>
         </div>
-        <div>
-          TI-RAX has received funding from the European Union’s Horizon Europe research and innovation action programme via Open Call #2 – MASTER, issued and executed under project MASTER, grant agreement Nr. 101093079. The views expressed are those of the author(s) only and do not necessarily reflect the views of the European Union.<br /><br />
-          <strong>TI-RAX</strong> Version 0.1 · Stable · GNU GPLv3
+  
+        <div class="footer-acknowledgement">
+          <div class="footer-logos">
+            <img
+              src="https://www.master-xr.eu/wp-content/uploads/2023/04/logo_white.png"
+              alt="MASTER project logo"
+            />
+  
+            <img
+              src="https://www.master-xr.eu/wp-content/uploads/2023/04/european-flag-2.png"
+              alt="European Union logo"
+            />
           </div>
+  
+          <div>
+            <strong>TI-RAX</strong><br />
+            Version 0.1 · Stable · GNU GPLv3<br /><br />
+  
+            TI-RAX has received funding from the European Union’s Horizon Europe research and innovation action programme via Open Call #2 – MASTER, issued and executed under project MASTER, grant agreement Nr. 101093079. The views expressed are those of the author(s) only and do not necessarily reflect the views of the European Union.
+          </div>
+        </div>
+  
       </div>
-      <div>
+  
+      <div class="footer-right">
         <strong>Contact</strong><br />
         University of Cagliari:<br />
         <a href="mailto:mirko.marras@unica.it">mirko.marras@unica.it</a><br />
         <a href="mailto:andreag.martis@unica.it">andreag.martis@unica.it</a><br />
         <a href="mailto:diego.reforgiato@unica.it">diego.reforgiato@unica.it</a><br />
         <a href="mailto:daniele.riboni@unica.it">daniele.riboni@unica.it</a><br /><br />
+  
         R2M Solution:<br />
-        <a href="mailto:giuseppe.scarpi@r2msolution.com">giuseppe.scarpi@r2msolution.com</a>
+        <a href="mailto:giuseppe.scarpi@r2msolution.com">
+          giuseppe.scarpi@r2msolution.com
+        </a>
       </div>
+  
     </div>
   </footer>
 </body>
