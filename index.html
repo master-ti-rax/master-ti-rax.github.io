@@ -248,7 +248,7 @@
     .section-title p,
     .section-text {
       color: var(--muted);
-      font-size: 1.12rem;
+      font-size: 1.5rem;
       line-height: 1.58;
     }
 
@@ -286,7 +286,7 @@
     .partner p {
       margin-bottom: 0;
       color: var(--muted);
-      font-size: 1rem;
+      font-size: 1.2rem;
     }
 
     .soft-section {
@@ -372,7 +372,7 @@
     .resource span {
       display: block;
       color: var(--muted);
-      font-size: 0.98rem;
+      font-size: 1.4rem;
     }
 
     .partners-section { align-items: center; }
@@ -413,7 +413,7 @@
       max-width: 740px;
       margin: 0 auto 30px;
       color: var(--muted);
-      font-size: 1.12rem;
+      font-size: 1.5rem;
     }
 
     footer {
@@ -433,6 +433,27 @@
 
     footer strong { color: #ffffff; }
     footer a { color: #93c5fd; }
+
+    .footer-acknowledgement {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+    }
+    
+    .footer-logos {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+      margin-top: 4px;
+    }
+    
+    .footer-logos img {
+      height: 42px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+    }
 
     @media (max-width: 980px) {
       nav { display: none; }
@@ -678,10 +699,16 @@
 
   <footer id="contact">
     <div class="container footer-grid">
-      <div>
-        <strong>TI-RAX</strong><br />
-        Version 0.1 · Stable · GNU GPLv3<br /><br />
-        TI-RAX has received funding from the European Union’s Horizon Europe research and innovation action programme via Open Call #2 – MASTER, issued and executed under project MASTER, grant agreement Nr. 101093079. The views expressed are those of the author(s) only and do not necessarily reflect the views of the European Union.
+      <div class="footer-acknowledgement">
+        <div class="footer-logos">
+          <img src="https://www.master-xr.eu/wp-content/uploads/2023/04/logo_white.png" alt="MASTER project logo" />
+          <img src="https://www.master-xr.eu/wp-content/uploads/2023/04/european-flag-2.png" alt="European Union logo" />
+        </div>
+        <div>
+          <strong>TI-RAX</strong><br />
+          Version 0.1 · Stable · GNU GPLv3<br /><br />
+          TI-RAX has received funding from the European Union’s Horizon Europe research and innovation action programme via Open Call #2 – MASTER, issued and executed under project MASTER, grant agreement Nr. 101093079. The views expressed are those of the author(s) only and do not necessarily reflect the views of the European Union.
+        </div>
       </div>
       <div>
         <strong>Contact</strong><br />
